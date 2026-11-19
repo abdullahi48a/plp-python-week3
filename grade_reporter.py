@@ -1,0 +1,33 @@
+
+# Week 3 Assignment: Grade Reporter
+
+scores = [72, 45, 90, 61, 38]
+
+passed = 0
+failed = 0
+total = 0
+
+for score in scores:
+    total = total + score
+
+    if score >= 80:
+        grade = "A"
+    elif score >= 70:
+        grade = "B"
+    elif score >= 50:
+        grade = "C"
+    else:
+        grade = "F"
+
+    print(f"Score: {score}, Grade: {grade}")
+
+    if score >= 50:
+        passed = passed + 1
+    else:
+        failed = failed + 1
+
+average = total / len(scores)
+
+print("Passed:", passed)
+print("Failed:", failed)
+print("Average:", round(average, 1))
